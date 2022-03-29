@@ -685,6 +685,9 @@ body ul {
 
   width: 528px;
   height: 581px;
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
 
   background-color: #fff;
 
@@ -707,6 +710,37 @@ body ul {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #fff;
+}
+
+.modal-window-head{
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 0.87;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.input-container{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.input-container input{
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  column-gap: 4px;
+  width: 448px;
+  height: 40px;
+}
+
+.input-container label{
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: #757575;
 }
 
 .is-hidden{
