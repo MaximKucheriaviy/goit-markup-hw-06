@@ -539,6 +539,16 @@ body ul {
   padding: 12px 12px;
 }
 
+.form-mail-subscription{
+  display: flex;
+  margin-left: 93px;
+}
+
+.subscription-input-container{
+  display: flex;
+  flex-direction: column;
+}
+
 /* стили portfolio main */
 
 .card-container {
