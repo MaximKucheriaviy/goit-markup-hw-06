@@ -712,6 +712,14 @@ body ul {
   background-color: #fff;
 }
 
+.modal-close-button use,
+.modal-close-button use{
+  fill: var(--font-black2);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .modal-close-button:hover use,
 .modal-close-button:focus use{
   fill: var(--font-blue);
@@ -744,6 +752,10 @@ body ul {
   
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-container input:focus-visible,
@@ -754,6 +766,12 @@ body ul {
 .input-container input:focus,
 .input-container textarea:focus{
   border-color: var(--font-blue);
+}
+
+.input-container svg use{
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-container input:focus ~ svg > use{
@@ -796,7 +814,25 @@ body ul {
   margin-top: 20px;
 }
 
+.checkbox label{
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-a{
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .custom-checkbox{
+  position: relative;
+
   width: 16px;
   height: 15p;
   margin-right: 8px;
@@ -807,6 +843,10 @@ body ul {
 
 .checkbox a{
   color: var(--font-blue);
+}
+
+.checkbox input:checked + label  .checkbox-a{
+  opacity: 1;
 }
 
 .form-submit-button{
