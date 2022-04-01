@@ -31,6 +31,11 @@ img {
   display: block;
   max-width: 100%;
 }
+
+button{
+  cursor: pointer;
+}
+
 body {
   margin: 0px;
 
@@ -188,7 +193,8 @@ body ul {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.link:hover .icon-envelope {
+.link:hover .icon-envelope,
+.link:focus .icon-envelope  {
   fill: var(--font-blue);
 }
 /*стили index main*/
@@ -392,13 +398,7 @@ body ul {
   display: flex;
   column-gap: 10px;
 }
-.team-links-item {
-  border-radius: 50%;
 
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 .team-links-item use {
   fill: var(--icons-greay);
 
@@ -406,19 +406,30 @@ body ul {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.team-links-item:hover,
-.team-links-item:focus {
-  background-color: var(--font-blue);
-}
-.team-links-item:hover use,
-.team-links-item:focus use {
+
+.team-link:hover use,
+.team-link:focus use {
   fill: var(--font-white);
 }
+
 .team-link {
+  width: 100%;
+  height: 100%;
   padding: 12px;
   display: block;
   line-height: 0;
+  border-radius: 50%;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.team-link:hover,
+.team-link:focus{
+  background-color: var(--font-blue);
+}
+
 
 .clients-title {
   margin-bottom: 50px;
@@ -465,6 +476,7 @@ body ul {
 
 .footer .logo {
   color: var(--font-white);
+  margin-right: 0;
 }
 
 .address-text {
@@ -509,6 +521,7 @@ body ul {
   text-transform: uppercase;
   color: var(--font-white);
 }
+
 .footer-icons-list {
   display: flex;
   column-gap: 10px;
@@ -516,7 +529,13 @@ body ul {
 
 .footer-icons-list .item {
   line-height: 0px;
+}
 
+
+.footer-icon-link {
+  display: block;
+  padding: 12px 12px;
+  
   background-color: var(--icons-transpered);
   border-radius: 50%;
 
@@ -525,18 +544,14 @@ body ul {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-icons-list .item use {
+.footer-icon-link use,
+.footer-icon-link use{
   fill: var(--font-white);
 }
 
-.footer-icons-list .item:hover,
-.footer-icons-list .item:focus {
+.footer-icon-link:hover,
+.footer-icon-link:focus {
   background-color: var(--font-blue);
-}
-
-.footer-icon-link {
-  display: block;
-  padding: 12px 12px;
 }
 
 /* стили формы футтура */
