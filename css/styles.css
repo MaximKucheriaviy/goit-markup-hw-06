@@ -444,7 +444,10 @@ body ul {
   display: flex;
   column-gap: 30px;
 }
-.clients-icon-list .item {
+
+.clients-icon-link {
+  display: inline-block;
+
   width: 170px;
   padding: 16px 32px;
 
@@ -452,16 +455,17 @@ body ul {
   border-radius: 4px;
   fill: var(--icons-greay);
 
-  transition-property: fill;
+  transition-property: fill, border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clients-icon-list .item:hover,
-.clients-icon-list .item:focus {
+.clients-icon-link:hover,
+.clients-icon-link:focus{
   fill: var(--font-blue);
   border-color: var(--font-blue);
 }
+
 /* стили футера */
 .footer {
   padding-top: 60px;
@@ -816,7 +820,6 @@ body ul {
 .input-container textarea{
   width: 448px;
   height: 40px;
-  margin-bottom: 10px;
   padding-left: 42px;
   
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -919,7 +922,7 @@ body ul {
 }
 
 .form-submit-button{
-  margin-top: 40px;
+  margin-top: 30px;
   padding: 10px 55px;
 
   margin-left: auto;
